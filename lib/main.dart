@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'transaction_screens.dart';
 void main() => runApp(const ExpenseManagerApp());
 
 class ExpenseManagerApp extends StatelessWidget {
@@ -70,9 +70,8 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    // TODO: chuyển sang màn hình tiếp theo ở các buổi sau
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Bắt đầu!')),
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const AddTransactionScreen()),
                     );
                   },
                   child: const Text(
